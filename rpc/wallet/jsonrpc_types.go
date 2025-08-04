@@ -94,6 +94,7 @@ type Destination struct {
 
 type TransferParameters struct {
 	Destinations   []Destination `json:"destinations"`
+	AssetType      string        `json:"asset_type,omitempty"`
 	AccountIndex   uint          `json:"account_index,omitempty"`
 	SubaddrIndices []uint        `json:"subaddr_indices,omitempty"`
 	Priority       uint          `json:"priority,omitempty"`
