@@ -90,13 +90,17 @@ type GetHeightResult struct {
 type Destination struct {
 	Amount  uint64 `json:"amount"`
 	Address string `json:"address"`
+	AssetType string `json:"asset_type"`
 }
 
 type TransferParameters struct {
 	Destinations   []Destination `json:"destinations"`
-	AssetType      string        `json:"asset_type,omitempty"`
+	SourceAsset    string        `json:"source_asset"`
+	DestAsset      string        `json:"dest_asset"`
+	TxType         uint          `json:"tx_type"`
 	AccountIndex   uint          `json:"account_index,omitempty"`
 	SubaddrIndices []uint        `json:"subaddr_indices,omitempty"`
+	RingSize       uint          `json:"ring_size,omitempty"` 
 	Priority       uint          `json:"priority,omitempty"`
 	UnlockTime     uint          `json:"unlock_time,omitempty"`
 	GetTxKey       bool          `json:"get_tx_key,omitempty"`
