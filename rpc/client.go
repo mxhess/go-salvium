@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"net/url"
 
-	mhttp "github.com/duggavo/go-monero/http"
+	mhttp "github.com/mxhess/go-salvium/http"
 )
 
 const (

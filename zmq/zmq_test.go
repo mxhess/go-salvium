@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/duggavo/go-monero/zmq"
+	"github.com/mxhess/go-salvium/zmq"
 )
 
 func TestJSONFromFrame(t *testing.T) {

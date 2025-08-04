@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	mhttp "github.com/duggavo/go-monero/http"
+	mhttp "github.com/mxhess/go-salvium/http"
 )
 
 func TestParseChallenge(t *testing.T) {
