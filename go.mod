@@ -1,4 +1,4 @@
-module github.com/duggavo/go-monero
+module github.com/mxhess/go-salvium
 
 go 1.17
 
