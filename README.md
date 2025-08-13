@@ -75,7 +75,7 @@ import (
 
 func ExampleGetHeight() {
 	ctx := context.Background()
-	addr := "http://localhost:19086"
+	addr := "http://localhost:19082"
 
 	// instantiate a generic RPC client
 	client, err := rpc.NewClient(addr)
