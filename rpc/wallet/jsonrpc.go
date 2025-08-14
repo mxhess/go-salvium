@@ -3,6 +3,7 @@ package wallet
 import (
 	"context"
 	"fmt"
+	"encoding/json"
 )
 
 func (c *Client) GetAccounts(
@@ -221,9 +222,13 @@ func (c *Client) IsMultisig(ctx context.Context) (*IsMultisigResult, error) {
 func (c *Client) GetTransfers(ctx context.Context, params GetTransfersParams) (*GetTransfersResult, error) {
 	resp := &GetTransfersResult{}
 
+	jsonBytes, _ := json.Marshal(params)
+	fmt.Printf("DEBUG GetTransfers params: %s\n", string(jsonBytes))
+
 	if err := c.JSONRPC(ctx, "get_transfers", params, resp); err != nil {
 		return nil, fmt.Errorf("jsonrpc: %w", err)
 	}
 
 	return resp, nil
 }
+

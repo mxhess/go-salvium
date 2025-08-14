@@ -98,8 +98,8 @@ type TransferParameters struct {
 	SourceAsset    string        `json:"source_asset"`
 	DestAsset      string        `json:"dest_asset"`
 	TxType         uint          `json:"tx_type"`
-	AccountIndex   uint          `json:"account_index,omitempty"`
-	SubaddrIndices []uint        `json:"subaddr_indices,omitempty"`
+	AccountIndex   uint          `json:"account_index"`
+	SubaddrIndices []uint        `json:"subaddr_indices"`
 	RingSize       uint          `json:"ring_size,omitempty"` 
 	Priority       uint          `json:"priority,omitempty"`
 	UnlockTime     uint          `json:"unlock_time,omitempty"`
