@@ -149,8 +149,8 @@ type Transfer struct {
 
 type IncomingTransfersParams struct {
 	TransferType   string `json:"transfer_type"`
-	AccountIndex   uint   `json:"account_index,omitempty"`
-	SubaddrIndices []uint `json:"subaddr_indices,omitempty"`
+	AccountIndex   uint   `json:"account_index"`
+	SubaddrIndices []uint `json:"subaddr_indices"`
 }
 
 type IncomingTransfersResult struct {
@@ -160,7 +160,7 @@ type IncomingTransfersResult struct {
 type SweepAllParams struct {
 	Address        string `json:"address"`                   // Destination public address.
 	AccountIndex   uint   `json:"account_index"`             // Sweep transactions from this account.
-	SubaddrIndices []uint `json:"subaddr_indices,omitempty"` // Sweep from this set of subaddresses in the account.
+	SubaddrIndices []uint `json:"subaddr_indices"`           // Sweep from this set of subaddresses in the account.
 	Priority       uint8  `json:"priority,omitempty"`        // Priority for sending the sweep transfer, partially determines fee.
 	Outputs        uint   `json:"outputs,omitempty"`         // Specify the number of separate outputs that will be created.
 	UnlockTime     uint64 `json:"unlock_time,omitempty"`     // Number of blocks before the coins can be spent.
@@ -256,8 +256,8 @@ type GetTransfersParams struct {
 	MinHeight      uint64 `json:"min_height,omitempty"` // Minimum block height to scan for transfers, if filtering by height is enabled.
 	MaxHeight      uint64 `json:"max_height,omitempty"` // Maximum block height to scan for transfers, if filtering by height is enabled (defaults to max block height).
 
-	AccountIndex   uint   `json:"account_index,omitempty"`   // Index of the account to query for transfers. (defaults to 0)
-	SubaddrIndices []uint `json:"subaddr_indices,omitempty"` // Defaults to empty - all indices
+	AccountIndex   uint   `json:"account_index"`             // Index of the account to query for transfers. (defaults to 0)
+	SubaddrIndices []uint `json:"subaddr_indices"`           // Defaults to empty - all indices
 	AllAccounts    bool   `json:"all_accounts,omitempty"`    // Defaults to false
 }
 
